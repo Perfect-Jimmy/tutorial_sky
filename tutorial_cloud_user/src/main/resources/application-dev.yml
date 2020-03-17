@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring_cloud_start
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        service-name: ${spring.application.name} #注册到consul的服务名字
+
+
+
