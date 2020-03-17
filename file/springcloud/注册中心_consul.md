@@ -27,4 +27,4 @@
     <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
 ```
-2. 在启动类上添加注解@EnableDiscoveryClient,是consul能够发现服务
+2. 在启动类上添加注解@EnableDiscoveryClient,使应用程序成为Consul"服务"（即注册自己）和"客户端"（即可以查询Consul查找其他服务）

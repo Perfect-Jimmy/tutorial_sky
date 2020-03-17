@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8085
 spring:
   application:
-    name: spring_cloud_start
+    name: spring-cloud-user-server
   cloud:
     consul:
       host: localhost

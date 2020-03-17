@@ -2,14 +2,20 @@ server:
   port: 9080
 spring:
   application:
-    name: spring_cloud_book_server
+    name: spring-cloud-book-server
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        enabled: true
+        register: false #不注册到consul,默认true
+        enabled: true #false可以注册到consul但是无法查询到注册的其他服务
         service-name: ${spring.application.name} #注册到consul的服务名字
+        health-check-interval: 10s #健康检查间隔  1m表示1分钟
+        health-check-path: /actuator/health #健康检查路径
+        tags: jimmy=20,purple=紫
+
+
 
 
 

@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: spring_cloud_start
+    name: spring-cloud-start
   cloud:
     consul:
       host: localhost
