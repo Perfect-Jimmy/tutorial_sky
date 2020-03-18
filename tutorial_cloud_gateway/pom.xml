@@ -8,8 +8,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>tutorial_cloud_start</artifactId>
-    <name>tutorial_cloud_start</name>
+    <artifactId>tutorial_cloud_gateway</artifactId>
+    <name>tutorial_cloud_gateway</name>
 
     <dependencies>
         <dependency>
@@ -50,6 +50,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
             <version>${turbine.version}</version>
+        </dependency>
+        <!--网关spring-cloud-starter-gateway -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+            <version>${gateway.version}</version>
         </dependency>
 
     </dependencies>

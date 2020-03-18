@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 8181
 spring:
   application:
-    name: spring-cloud-start
+    name: spring-cloud-gateway
   cloud:
     consul:
       host: localhost
@@ -15,12 +15,6 @@ feign:
   hystrix:
     enabled: true #开启feign熔断
 
-
-#turbine:
-  #app-config: spring-cloud-book-server,spring-cloud-start #需要监控的服务
-  #aggregator:
-    #cluster-config: default
-  #cluster-name-expression: new String("default")
 
 
 

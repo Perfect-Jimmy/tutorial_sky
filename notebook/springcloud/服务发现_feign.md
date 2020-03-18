@@ -6,7 +6,7 @@
     <artifactId>spring-cloud-starter-openfeign</artifactId>
 </dependency>
 ```
-2. 启动类上添加注解@EnableFeignClients
+2. 启动类添加注解@EnableFeignClients
 3. 负载均衡
 声明一个接口,value值为需要调用的服务注册到consul里面的服务名字
 ```

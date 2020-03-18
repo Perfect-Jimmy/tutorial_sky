@@ -10,10 +10,9 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2020/3/18
  */
 @Configuration
-public class RibbonConfigurer {
-
+public class HystrixDashboardConfigurer {
     /**
-     * hystrix dashboar监控
+     * hystrix dashboar监控  注册断路器指标流Servlet
      * @return
      */
     @Bean
