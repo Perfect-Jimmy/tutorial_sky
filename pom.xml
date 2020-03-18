@@ -34,8 +34,8 @@
     <actuator.version>2.2.5.RELEASE</actuator.version>
     <ribbon.version>2.2.2.RELEASE</ribbon.version>
     <feign.version>2.2.2.RELEASE</feign.version>
-    <hystrix.version>2.0.1.RELEASE</hystrix.version>
-    <hystrixdashboard.version>1.4.5.RELEASE</hystrixdashboard.version>
+    <hystrix.version>2.2.2.RELEASE</hystrix.version>
+    <hystrixdashboard.version>2.2.2.RELEASE</hystrixdashboard.version>
     <stream.version>2.0.1.RELEASE</stream.version>
     <gateway.version>2.0.1.RELEASE</gateway.version>
     <config.version>2.0.1.RELEASE</config.version>

@@ -1,5 +1,6 @@
 package com.tutorial.controller;
 
+import com.tutorial.ribbon.service.BookRibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -20,6 +21,8 @@ public class RibbonController {
     private LoadBalancerClient loadBalancerClient;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private BookRibbonService bookRibbonService;
 
     @RequestMapping("/chooseOne")
     public void chooseOne(){
@@ -36,6 +39,14 @@ public class RibbonController {
     public String ribbonCall() {
         String method = "bookTest";
         return restTemplate.getForEntity("http://spring-cloud-book-server/" + method, String.class).getBody();
+    }
+
+    /**
+     * ribbon hystrix 熔断
+     */
+    @GetMapping(value = "/ribbonHystrixCall")
+    public String ribbonHystrixCall(){
+        return bookRibbonService.ribbonHystrixCall();
     }
 
 }

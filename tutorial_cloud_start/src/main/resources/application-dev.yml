@@ -11,5 +11,9 @@ spring:
         enabled: true
         service-name: ${spring.application.name} #注册到consul的服务名字
 
+feign:
+  hystrix:
+    enabled: true #开启feign熔断
+
 
 
