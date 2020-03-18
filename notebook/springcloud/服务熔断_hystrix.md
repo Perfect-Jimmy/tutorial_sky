@@ -5,10 +5,6 @@
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 </dependency>
-<dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-</dependency>
 ```
 ## ribbon 方式
 1. 启动类添加注解@EnableHystrix 
