@@ -12,7 +12,7 @@
 ```
 ## ribbon 方式
 1. 启动类添加注解@EnableHystrix 
-2. 使用注解
+2. 使用注解@HystrixCommand(fallbackMethod = "getInfoFailure")声明错误回调类
 ```
 @Autowired
 private RestTemplate restTemplate;
@@ -34,6 +34,15 @@ public String getInfoFailure() {
 }
 ```
 3. 调用
+```
+@Autowired
+private BookRibbonService bookRibbonService;
+
+@GetMapping(value = "/ribbonHystrixCall")
+public String ribbonHystrixCall(){
+    return bookRibbonService.ribbonHystrixCall();
+}
+```
 
 
 
