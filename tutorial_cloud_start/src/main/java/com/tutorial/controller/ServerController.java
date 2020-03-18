@@ -15,8 +15,6 @@ import java.util.List;
 @RestController()
 @RequestMapping("/consul")
 public class ServerController {
-   /* @Autowired
-    private LoadBalancerClient loadBalancerClient;*/
     @Autowired
     private DiscoveryClient discoveryClient;
 
@@ -32,8 +30,5 @@ public class ServerController {
     }
 
 
-    public void getOne(){
-        //loadBalancerClient.choose("consul-producer").toString();
-        //loadBalancer.choose("service-producer").getUri().toString();
-    }
+
 }

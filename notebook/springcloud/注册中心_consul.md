@@ -14,6 +14,15 @@
 
 
 
+## 安装(mac)
+./consul agent -dev -client=0.0.0.0
+--client 用0.0.0.0表示不限客户端(调用方)的IP
+
+注意: OS X 用户：Consul 使用 hostname 做 node name，如果 node name 包含句点，会导致 DNS 无法工作，所以需要显式设置 node name 用 -node flag
+
+./consul agent -dev -client=0.0.0.0 -node=node0
+
+
 
 ## 集成consul
 1. 添加依赖

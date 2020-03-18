@@ -22,6 +22,10 @@ public class DelUnregisterController {
     @Autowired
     private ConsulClient consulClient;
 
+    /**
+     * id:spring-cloud-book-server
+     * @param id
+     */
     @RequestMapping("/delUnregisterInstance/{id}")
     public void delUnregisterInstance(@PathVariable String id){
         List<HealthService> response = consulClient.getHealthServices(id, false, null).getValue();
@@ -36,19 +40,4 @@ public class DelUnregisterController {
             });
         }
     }
-
-
-  /*  @RequestMapping(value = "/unregister/{id}", method = RequestMethod.POST)
-    public String unregisterServiceAll(@PathVariable String id) {
-        List<HealthService> response = consulClient.getHealthServices(id, false, null).getValue();
-        for(HealthService service : response) {
-            service.getChecks().forEach(check -> {
-                if(!check.getStatus().name().equals(Check.CheckStatus.PASSING.name())) {
-                    logger.info("unregister : {}", check.getServiceId());
-                    consulClient.agentServiceDeregister(check.getServiceId());
-                }
-            });
-        }
-        return null;
-    }*/
 }

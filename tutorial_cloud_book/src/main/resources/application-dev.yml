@@ -8,7 +8,7 @@ spring:
       host: localhost
       port: 8500
       discovery:
-        register: false #不注册到consul,默认true
+        register: true #false不注册到consul,默认true
         enabled: true #false可以注册到consul但是无法查询到注册的其他服务
         service-name: ${spring.application.name} #注册到consul的服务名字
         health-check-interval: 10s #健康检查间隔  1m表示1分钟

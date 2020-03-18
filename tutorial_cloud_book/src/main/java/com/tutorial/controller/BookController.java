@@ -12,6 +12,7 @@ public class BookController {
 
     @RequestMapping("/bookTest")
     public String bookTest(){
+       
         return "book server";
     }
 }
