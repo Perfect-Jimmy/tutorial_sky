@@ -22,10 +22,17 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>${actuator.version}</version>
         </dependency>
+        <!--spring-cloud-starter-netflix-ribbon -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
             <version>${ribbon.version}</version>
+        </dependency>
+        <!--spring-cloud-starter-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>${feign.version}</version>
         </dependency>
 
     </dependencies>

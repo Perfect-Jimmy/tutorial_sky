@@ -12,7 +12,13 @@ public class BookController {
 
     @RequestMapping("/bookTest")
     public String bookTest(){
-       
+        System.out.println("AAAAAA");
+        return "book server";
+    }
+
+    @RequestMapping("/bookFeign")
+    public String bookFeign(){
+        System.out.println("BBBBBB");
         return "book server";
     }
 }

@@ -33,13 +33,12 @@ RestTemplate restTemplate(){
 @Autowired
 private RestTemplate restTemplate;
 
-
 @GetMapping(value = "/ribbonCall")
 public String ribbonCall() {
     String method = "bookTest";
     return restTemplate.getForEntity("http://spring-cloud-book-server/" + method, String.class).getBody();
 }
 ```
-
+http://spring-cloud-book-server/即book server注册到consul上的名字
 
 

@@ -29,7 +29,7 @@ public class RibbonController {
     }
 
     /**
-     * 负载均衡查询
+     * 负载均衡查询 http://spring-cloud-book-server/  consul中注册的服务名字
      * @return
      */
     @GetMapping(value = "/ribbonCall")
