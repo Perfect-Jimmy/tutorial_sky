@@ -41,7 +41,7 @@
     <stream.version>2.0.1.RELEASE</stream.version>
     <gateway.version>2.2.2.RELEASE</gateway.version>
     <config.version>2.0.1.RELEASE</config.version>
-    <webflux.version>2.0.1.RELEASE</webflux.version>
+    <webflux.version>2.2.5.RELEASE</webflux.version>
     <zipkin.version>2.0.1.RELEASE</zipkin.version>
     <sleuth.version>2.0.1.RELEASE</sleuth.version>
   </properties>
@@ -85,17 +85,6 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
-    <!--springboot整合springMVC Web-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-      <exclusions>
-        <exclusion>
-          <groupId>org.apache.tomcat</groupId>
-          <artifactId>tomcat-jdbc</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -191,4 +180,20 @@
       <version>1.23</version>
     </dependency>
   </dependencies>
+  <dependencyManagement>
+    <dependencies>
+      <!--springboot整合springMVC Web-->
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>2.2.5.RELEASE</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>

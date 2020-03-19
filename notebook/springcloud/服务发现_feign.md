@@ -1,4 +1,4 @@
-# 服务发现_feign
+# 服务发现_feign 声明式服务调用,简化RestTemplate使用
 1. 添加依赖
 ```
 <dependency>

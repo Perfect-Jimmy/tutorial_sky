@@ -7,6 +7,7 @@
         <groupId>com.tutorial</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>tutorial_cloud_gateway</artifactId>
     <name>tutorial_cloud_gateway</name>
@@ -22,36 +23,8 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>${actuator.version}</version>
         </dependency>
-        <!--spring-cloud-starter-netflix-ribbon -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-            <version>${ribbon.version}</version>
-        </dependency>
-        <!--spring-cloud-starter-openfeign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <version>${feign.version}</version>
-        </dependency>
-        <!--服务熔断spring-cloud-starter-netflix-hystrix -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-            <version>${hystrix.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
-            <version>${hystrixdashboard.version}</version>
-        </dependency>
-        <!--断路器集群监控spring-cloud-starter-netflix-turbine -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
-            <version>${turbine.version}</version>
-        </dependency>
         <!--网关spring-cloud-starter-gateway -->
+        <!--因为spring cloud gateway是基于webflux的,不要导入spring-boot-start-web-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>

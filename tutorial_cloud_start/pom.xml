@@ -12,11 +12,18 @@
     <name>tutorial_cloud_start</name>
 
     <dependencies>
+        <!--spring-boot-starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--服务发现spring-cloud-starter-consul-discovery-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
             <version>${consul.version}</version>
         </dependency>
+        <!--spring-boot-starter-actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
@@ -51,6 +58,5 @@
             <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
             <version>${turbine.version}</version>
         </dependency>
-
     </dependencies>
 </project>

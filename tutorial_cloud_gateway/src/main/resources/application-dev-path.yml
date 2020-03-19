@@ -15,9 +15,9 @@ spring:
         service-name: ${spring.application.name} #注册到consul的服务名字
     #路由网关
     gateway:
-      discovery:
-        locator:
-          #enabled: true
+      routes:
+        -id: book
+         uri:
 
 
 

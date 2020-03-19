@@ -1,4 +1,4 @@
-# 服务发现_ribbon
+# 服务发现_ribbon 客户端RestTemplate负载均衡组件
 1. 添加依赖
 ```
 <dependency>
