@@ -42,8 +42,8 @@
     <gateway.version>2.2.2.RELEASE</gateway.version>
     <config.version>2.0.1.RELEASE</config.version>
     <webflux.version>2.2.5.RELEASE</webflux.version>
-    <zipkin.version>2.0.1.RELEASE</zipkin.version>
-    <sleuth.version>2.0.1.RELEASE</sleuth.version>
+    <zipkin.version>2.2.2.RELEASE</zipkin.version>
+    <sleuth.version>2.2.2.RELEASE</sleuth.version>
   </properties>
 
   <parent>
