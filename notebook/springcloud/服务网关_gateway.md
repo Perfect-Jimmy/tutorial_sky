@@ -1,8 +1,8 @@
 # 服务网关_gateway
 ## 名词概念
-* Route(路由)：网关的基本模块，它有一个id、一个目标uri、一组断言和一组过滤器组成，如果断言为真，则路由匹配。
-* Predicate(断言)：是一个java8的Predicate。输入类型是一个ServerWebExchange。可以使用它来匹配来自HTTP请求的内容。
-* Filter(过滤器)：是org.springframework.cloud.gateway.filter.GatewayFilter的实例，可以使用它来修改请求和响应
+* Route(路由):网关的基本模块,它有一个id、一个目标uri、一组断言和一组过滤器组成,如果断言为真,则路由匹配
+* Predicate(断言):是一个java8的Predicate。输入类型是一个ServerWebExchange.可以使用它来匹配来自HTTP请求的内容
+* Filter(过滤器):是org.springframework.cloud.gateway.filter.GatewayFilter的实例,可以使用它来修改请求和响应
 
 1. 添加依赖
 ```

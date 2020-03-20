@@ -17,10 +17,9 @@ spring:
     gateway:
       routes:
       - id: book
-        #uri: http://localhost:9080         #写法一 单uri
-        uri: lb://spring-cloud-book-server  #写法二 lb:类型,表示从微服务注册中心订阅服务并且进行服务的路由
+        uri: http://localhost:9080
         predicates:
-        - Path=/bookTest  #匹配路径转发 当访问http://localhost:8181/bookTest便会转发到http://localhost:9080/bookTest
+        - Between=2019-04-29T00:00:00+08:00[Asia/Shanghai], 2019-05-01T00:00:00+08:00[Asia/Shanghai]  #匹配路径转发 当访问http://localhost:8181/bookTest便会转发到http://localhost:9080/bookTest
 
 
 

@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
  * @Author: jimmy
  * @Date: 2020/3/19
  */
-@Configuration
+//@Configuration
 public class GatewayConfigurer {
 
-    @Bean
+    //@Bean
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 // Add a simple re-route from: /get to: http://httpbin.org:80
