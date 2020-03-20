@@ -1,0 +1,39 @@
+server:
+  port: 8181
+spring:
+  autoconfigure:
+    #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    #注册中心
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        service-name: ${spring.application.name} #注册到consul的服务名字
+    #路由网关
+    gateway:
+      routes:
+      - id: book
+        uri: lb://spring-cloud-book-server
+        predicates:
+        - Path=/book/bookTest
+        filters:
+        - StripPrefix=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

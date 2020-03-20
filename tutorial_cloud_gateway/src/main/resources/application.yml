@@ -1,5 +1,6 @@
 spring:
   profiles:
    # active: dev
-    active: dev-path
+   # active: dev-path
    # active: dev-before
+     active: dev-stripprefix #过滤器
