@@ -46,11 +46,12 @@ gateway:
 访问http://localhost:8181/book/bookTest
 不配StripPrefix,最终访问http://spring-cloud-book-server/book/bookTest
 配置StripPrefix,最终访问http://spring-cloud-book-server/bookTest,会去掉一个前缀/book
-
-
 ```
 * PrefixPath 过滤器,与StripPrefix相反
 * Hystrix 过滤器:将断路器引入网关路由,保护服务免受级联故障的影响,并在下游故障时提供回退响应
+```
+
+```
 
 #### 全局过滤器
 * LoadBalancerClient负载均衡过滤器
