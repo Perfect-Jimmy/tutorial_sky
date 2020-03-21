@@ -24,6 +24,7 @@
     <module>tutorial_shiro</module>
     <module>tutorial_kafka</module>
     <module>tutorial_cloud_gateway</module>
+      <module>tutorial_docker</module>
   </modules>
 
   <properties>
