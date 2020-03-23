@@ -1,0 +1,47 @@
+server:
+  port: 8181
+spring:
+  autoconfigure:
+    #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    #注册中心
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        service-name: ${spring.application.name} #注册到consul的服务名字
+    #路由网关
+    gateway:
+      routes:
+      - id: book
+        uri: lb://spring-cloud-book-server
+        predicates:
+        - Path=/book/bookTest
+        filters:
+        - AddRequestParameter=age, three #添加参数
+        - name: RequestRateLimiter
+          args:
+            key-resolver: '#{@uriKeyResolver}'
+            #希望允许用户每秒处理多少个请求
+            redis-rate-limiter.replenishRate: 1
+            #用户允许在一秒钟内完成的最大请求数
+            redis-rate-limiter.burstCapacity: 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

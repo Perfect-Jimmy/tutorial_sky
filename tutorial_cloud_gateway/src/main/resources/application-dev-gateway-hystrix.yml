@@ -15,9 +15,19 @@ spring:
         service-name: ${spring.application.name} #注册到consul的服务名字
     #路由网关
     gateway:
-      discovery:
-        locator:
-          #enabled: true  #true可以直接使用应用名称调用服务
+      routes:
+      - id: book
+        uri: lb://spring-cloud-book-server
+        predicates:
+        - Path=/getBook
+        filters:
+        - AddRequestParameter=name, java #添加参数
+        - name: Hystrix
+          args:
+            name: fallbackcmd
+            fallbackUri: forward:/fallBack #fallback 时调用的方法 http://localhost:8181/fallback
+
+
 
 
 

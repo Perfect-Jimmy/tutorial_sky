@@ -1,6 +1,7 @@
 spring:
   profiles:
    # active: dev
-   # active: dev-path
-   # active: dev-before
-     active: dev-stripprefix #过滤器
+   # active: dev-gateway-path
+   # active: dev-gateway-before
+   # active: dev-gateway-stripprefix #过滤器
+    active: dev-gateway-hystrix #熔断
