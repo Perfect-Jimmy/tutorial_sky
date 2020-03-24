@@ -13,6 +13,7 @@ import java.util.List;
 
 /**
  * 剔除已注销的实例  http://blog.didispace.com/consul-deregister/
+ * https://www.jianshu.com/p/29efa6eb527b
  * @Author: jimmy
  * @Date: 2020/3/17
  */

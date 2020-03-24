@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
  * @Author: jimmy
  * @Date: 2020/3/24
  */
-@Configuration
+//@Configuration
 public class GatewayRatelimitConfigurer {
 
     @Bean

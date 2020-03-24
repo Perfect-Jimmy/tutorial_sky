@@ -53,10 +53,16 @@
             <version>${hystrixdashboard.version}</version>
         </dependency>
         <!--断路器集群监控spring-cloud-starter-netflix-turbine -->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
             <version>${turbine.version}</version>
-        </dependency>
+        </dependency>-->
+        <!--spring-cloud-sleuth-zipkin -->
+         <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+              <version>${zipkin.version}</version>
+          </dependency>
     </dependencies>
 </project>

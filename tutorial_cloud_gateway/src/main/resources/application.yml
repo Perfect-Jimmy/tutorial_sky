@@ -5,4 +5,5 @@ spring:
    # active: dev-gateway-before
    # active: dev-gateway-stripprefix #过滤器
    # active: dev-gateway-hystrix #熔断
-     active: dev-gateway-ratelimit #限流
+   # active: dev-gateway-ratelimit #限流
+    active: dev-sleuth

@@ -1,0 +1,53 @@
+server:
+  port: 8181
+spring:
+  autoconfigure:
+    #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    #注册中心
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: true
+        service-name: ${spring.application.name} #注册到consul的服务名字
+    #路由网关
+    gateway:
+      routes:
+      - id: book
+        #uri: http://localhost:9080         #写法一 单uri
+        uri: lb://spring-cloud-book-server  #写法二 lb:类型,表示从微服务注册中心订阅服务并且进行服务的路由
+        predicates:
+        - Path=/bookTest  #匹配路径转发 当访问http://localhost:8181/bookTest便会转发到http://localhost:9080/bookTest
+      - id: server-start
+        uri: lb://spring-cloud-start  #写法二 lb:类型,表示从微服务注册中心订阅服务并且进行服务的路由
+        predicates:
+        - Path=/sleuth/**  #匹配路径转发 当访问http://localhost:8181/bookTest便会转发到http://localhost:9080/bookTest
+
+  #链路追踪
+  zipkin:
+    base-url: http://localhost:9411
+    locator:
+      discovery:
+        enabled: true #支持通过服务发现来定位host name
+  sleuth:
+    web:
+      client:
+        enabled: true #web开启sleuth功能
+    sampler:
+      probability: 1.0 #[0,1],可以设置为小数,当设置为1.0时就是链路数据100%收集到zipkin,当设置为0.1时,即10%概率收集链路数据
+
+
+
+
+
+
+
+
+
+
+
+
+

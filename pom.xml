@@ -25,6 +25,8 @@
     <module>tutorial_kafka</module>
     <module>tutorial_cloud_gateway</module>
       <module>tutorial_docker</module>
+      <module>tutorial_cloud_sleuth</module>
+    <module>tutorial_cloud_skywalking</module>
   </modules>
 
   <properties>
