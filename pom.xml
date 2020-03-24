@@ -24,8 +24,8 @@
     <module>tutorial_shiro</module>
     <module>tutorial_kafka</module>
     <module>tutorial_cloud_gateway</module>
-      <module>tutorial_docker</module>
-      <module>tutorial_cloud_sleuth</module>
+    <module>tutorial_docker</module>
+    <module>tutorial_cloud_sleuth</module>
     <module>tutorial_cloud_skywalking</module>
   </modules>
 
@@ -176,6 +176,7 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+      <version>2.2.5.RELEASE</version>
     </dependency>
     <!--解决java -jar后报错ClassNotFoundException: org.springframework.boot.SpringApplication-->
     <dependency>
