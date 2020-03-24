@@ -45,6 +45,7 @@
     <webflux.version>2.2.5.RELEASE</webflux.version>
     <zipkin.version>2.2.2.RELEASE</zipkin.version>
     <sleuth.version>2.2.2.RELEASE</sleuth.version>
+    <redis.version>2.2.5.RELEASE</redis.version>
   </properties>
 
   <parent>

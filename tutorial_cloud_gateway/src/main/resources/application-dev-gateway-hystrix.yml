@@ -19,8 +19,9 @@ spring:
       - id: book
         uri: lb://spring-cloud-book-server
         predicates:
-        - Path=/getBook
+        - Path=/book/getBook
         filters:
+        - StripPrefix=1
         - AddRequestParameter=name, java #添加参数
         - name: Hystrix
           args:

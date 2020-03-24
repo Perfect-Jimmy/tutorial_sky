@@ -5,6 +5,12 @@ spring:
     #exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
   application:
     name: spring-cloud-gateway
+  redis:
+    host: 192.168.50.115
+    port: 6379
+    database: 1
+    password: ysten123
+
   cloud:
     #注册中心
     consul:
@@ -19,11 +25,12 @@ spring:
       - id: book
         uri: lb://spring-cloud-book-server
         predicates:
-        - Path=/book/bookTest
+        - Path=/bookTest
         filters:
         - AddRequestParameter=age, three #添加参数
         - name: RequestRateLimiter
           args:
+            #限流过滤器的Bean名称
             key-resolver: '#{@uriKeyResolver}'
             #希望允许用户每秒处理多少个请求
             redis-rate-limiter.replenishRate: 1
