@@ -20,9 +20,9 @@ public class CustomFutureTask<T> implements Runnable{
     T result;
 
     /**
-     * 为实现2，定义一个状态变量,定义一个容器装入线程
+     * 为实现2,定义一个状态变量,定义一个容器装入线程
      */
-    volatile  String state = "new";
+    volatile String state = "new";
     LinkedBlockingQueue<Thread> queue = new LinkedBlockingQueue<Thread>();
 
 
@@ -45,7 +45,7 @@ public class CustomFutureTask<T> implements Runnable{
 
     public void run() {
         try {
-            result = callable.call();;
+            result = callable.call();
         } catch (Exception e) {
             e.printStackTrace();
         }finally {

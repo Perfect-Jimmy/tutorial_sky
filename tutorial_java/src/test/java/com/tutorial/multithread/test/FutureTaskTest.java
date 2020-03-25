@@ -118,9 +118,6 @@ public class FutureTaskTest {
      */
     @Test
     public void test4() throws InterruptedException, ExecutionException {
-        /**
-         * 不使用线程池
-         */
         StopWatch stopWatch = new StopWatch("four");
         stopWatch.start("task1");
         Callable<String> callName = new Callable<String>() {
