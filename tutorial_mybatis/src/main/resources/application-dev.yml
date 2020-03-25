@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-mybatis
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+   # url: jdbc:mysql://192.168.1.31:3306/search?useUnicode=true&ch4aracterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+   # url: jdbc:mysql://192.168.1.31:3306/search_2.2?useUnicode=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&characterSetResults=UTF-8&autoReconnect=true&allowMultiQueries=true&failOverReadOnly=false
+    username: root
+    password: ysten123
+    url: jdbc:mysql://192.168.1.31:3306/search_2.2?useUnicode=true&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&characterSetResults=UTF-8&autoReconnect=true&allowMultiQueries=true&failOverReadOnly=false
+
+
+mybatis:
+ mapper-locations: classpath*:com.tutorial.repository.mapper/*.xml #classpath*:com.ysten.cos.*.repository.com.tutorial.model.com.tutorial.repository.mapper/*.xml
+
+
+
+

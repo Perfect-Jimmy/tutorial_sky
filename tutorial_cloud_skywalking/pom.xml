@@ -11,4 +11,21 @@
     <artifactId>tutorial_cloud_skywalking</artifactId>
     <name>tutorial_cloud_skywalking</name>
 
+    <dependencies>
+        <!--spring-boot-starter-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <version>${consul.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${actuator.version}</version>
+        </dependency>
+    </dependencies>
 </project>

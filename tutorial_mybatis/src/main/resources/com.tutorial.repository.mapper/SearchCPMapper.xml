@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tutorial.repository.mapper.SearchCpMapper">
+    <resultMap type="com.tutorial.model.SearchCp" id="searchCp">
+        <id property="id" column="id"/>
+        <result property="cpName" column="cp_name"/>
+    </resultMap>
+    <!-- 获取所有用户 -->
+    <select id="findById" resultMap="searchCp">
+		select * from search_cp where id=#{id};
+	</select>
+   <!-- &lt;!&ndash; 根据用户ID获取用户 &ndash;&gt;
+    <select id="getOne" resultMap="user">
+		select * from t_user where id=#{id}
+	</select>
+    &lt;!&ndash; 新增用户 &ndash;&gt;
+    <insert id="insertUser" parameterType="cn.zwqh.springboot.model.UserEntity">
+		insert into t_user (user_name,user_sex) values(#{userName},#{userSex})
+	</insert>
+    &lt;!&ndash; 修改用户 &ndash;&gt;
+    <update id="updateUser" parameterType="cn.zwqh.springboot.model.UserEntity">
+		update t_user set user_name=#{userName},user_sex=#{userSex} where id=#{id}
+	</update>
+    &lt;!&ndash; 删除用户 &ndash;&gt;
+    <delete id="deleteUser" parameterType="Long">
+		delete from t_user where id=#{id}
+	</delete>-->
+</mapper>

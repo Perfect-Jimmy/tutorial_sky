@@ -27,7 +27,7 @@
     <module>tutorial_docker</module>
     <module>tutorial_cloud_sleuth</module>
     <module>tutorial_cloud_skywalking</module>
-      <module>tutorial_test</module>
+    <module>tutorial_test</module>
   </modules>
 
   <properties>
@@ -35,6 +35,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <web.version>2.2.5.RELEASE</web.version>
     <consul.version>2.2.2.RELEASE</consul.version>
     <actuator.version>2.2.5.RELEASE</actuator.version>
     <ribbon.version>2.2.2.RELEASE</ribbon.version>
@@ -49,6 +50,8 @@
     <zipkin.version>2.2.2.RELEASE</zipkin.version>
     <sleuth.version>2.2.2.RELEASE</sleuth.version>
     <redis.version>2.2.5.RELEASE</redis.version>
+    <mysql.version>8.0.19</mysql.version>
+    <mybatis.version>2.1.2</mybatis.version>
   </properties>
 
   <parent>
@@ -185,6 +188,8 @@
       <artifactId>snakeyaml</artifactId>
       <version>1.23</version>
     </dependency>
+
+
   </dependencies>
   <dependencyManagement>
     <dependencies>
@@ -202,4 +207,16 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <build>
+    <plugins>
+      <!-- 跳过单元测试,不然打包的时候会因为加载不了application.yml报错 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
