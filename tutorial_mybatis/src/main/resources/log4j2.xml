@@ -51,7 +51,7 @@
 
 
 
-    <!--定义哪些类使用那些Appender,并可以设置日志级别-->
+    <!--定义哪些类使用那些Appender,并可以设置日志级别,只有定义了logger并引入的appender,appender才会生效-->
     <loggers>
         <!--
          <logger name="com.roncoo.education" level="debug" />
@@ -63,7 +63,14 @@
         -->
         <!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
         <!-- <logger name="org.springframework" level="INFO"></logger>
+        <logger name="org.elasticsearch" level="INFO"></logger>
+        <logger name="com.jd.jsf.gd" level="warn"></logger>
          <logger name="org.mybatis" level="INFO"></logger>-->
+        <!-- 将业务dao接口填写进去,并用控制台输出即可 -->
+        <logger name="com.tutorial.repository" level="debug" additivity="false">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="springBootFile"/>
+        </logger>
         <root level="info">
             <appenderref ref="CONSOLE" />
             <appenderref ref="autoClearLogFile" />

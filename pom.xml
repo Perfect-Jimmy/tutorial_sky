@@ -27,6 +27,8 @@
     <module>tutorial_docker</module>
     <module>tutorial_cloud_sleuth</module>
     <module>tutorial_test</module>
+    <module>tutorial_utils</module>
+      <module>tutorial_lambda</module>
   </modules>
 
   <properties>
@@ -214,6 +216,15 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
           <skip>true</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
