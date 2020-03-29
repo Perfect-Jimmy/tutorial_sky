@@ -56,7 +56,7 @@ public class SaleTicketsDemo01 {
 class Ticket{
     private int number = 30;
     private int count = 0;
-    Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock();
     public void sale(){
         //注意lock在try外面
         lock.lock();
