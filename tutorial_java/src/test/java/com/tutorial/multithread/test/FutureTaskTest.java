@@ -4,7 +4,6 @@ package com.tutorial.multithread.test;
 import com.tutorial.JavaTutorialStart;
 import com.tutorial.multithread.core.CustomFutureTask;
 import com.tutorial.service.UserService;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
@@ -27,7 +26,7 @@ public class FutureTaskTest {
      * StopWatch 'one': running time (millis) = 6009; [] took 6009 = 100%
      * @throws InterruptedException
      */
-    @Test
+   // @Test
     public void test1() throws InterruptedException {
         /**
          * 没有使用异步---多线程
@@ -50,7 +49,7 @@ public class FutureTaskTest {
      * 04002  100%  task2
      * @throws InterruptedException
      */
-    @Test
+   // @Test
     public void test2() throws InterruptedException, ExecutionException {
         /**
          * 使用线程池
@@ -82,7 +81,7 @@ public class FutureTaskTest {
      * @throws InterruptedException
      * @throws ExecutionException
      */
-    @Test
+   // @Test
     public void test3() throws InterruptedException, ExecutionException {
         /**
          * 不使用线程池
@@ -116,7 +115,7 @@ public class FutureTaskTest {
      * @throws InterruptedException
      * @throws ExecutionException
      */
-    @Test
+  //  @Test
     public void test4() throws InterruptedException, ExecutionException {
         StopWatch stopWatch = new StopWatch("four");
         stopWatch.start("task1");

@@ -3,10 +3,12 @@
 <!--status:用于设置log4j2自身内部的信息输出,可以不设置,当设置成trace时,会看到log4j2内部各种详细输出-->
 <!--monitorInterval:Log4j2能够自动检测修改配置 文件和重新配置本身,设置间隔秒数-->
 <configuration status="info">
+    <springProperty scope="context" name="LOG_HOME" source="logging.home"/>
     <!--常量引用 -->
     <properties>
         <!-- 文件输出格式 -->
         <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} |-%-5level [%thread] %c [%L] [ LOGID:%X{logId} ]-| %msg%n</property>
+        <property name="LOG_HOME_PATH" value="${LOG_HOME}"/>
     </properties>
 
     <!--定义日志输出位置(控制台、文件或其他)、内容结构(起始就是PatternLayout)、日志等级-->
@@ -17,7 +19,7 @@
         </Console>
 
         <!--append:false 这个log每次运行程序会自动清空-->
-        <File name="autoClearLogFile" fileName="./logs/autoClearLog.log" append="false">
+        <File name="autoClearLogFile" fileName="./autoClearLog.log" append="false">
             <PatternLayout pattern="${PATTERN}"/>
         </File>
 

@@ -15,3 +15,6 @@ server:
 spring:
   application:
     name: springboot-tutorial
+
+logging:
+  home: ./logs/test/
