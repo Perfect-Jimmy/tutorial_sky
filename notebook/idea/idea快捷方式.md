@@ -9,3 +9,6 @@ command+shift+r
 
 * 水平缩进
 shift+tab
+
+* 展示类的方法
+command+7
