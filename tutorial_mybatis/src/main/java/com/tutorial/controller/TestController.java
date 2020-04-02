@@ -14,4 +14,9 @@ public class TestController {
     public String test(){
         return "success";
     }
+
+    public static void main(String[] args) {
+        System.out.println(System.getProperties().getProperty("java.io.tmpdir"));
+        ///var/folders/ws/yvpzm7n56h527s6hq_hd7znh0000gn/T/
+    }
 }

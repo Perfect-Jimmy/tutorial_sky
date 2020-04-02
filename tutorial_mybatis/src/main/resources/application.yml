@@ -21,9 +21,8 @@ spring:
 
 
 
-
 mybatis:
   mapper-locations: classpath*:com.tutorial.repository.mapper/*.xml
 
 
-
+debug: true

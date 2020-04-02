@@ -2,7 +2,7 @@ server:
   port: 8080
   servlet:
     #context-path: /spring-boot
-    application-display-name: /spring-boot-tutorial
+    application-display-name: /springboot-ehcache-tutorial
   error:
     path: /error
   #内嵌tomcat配置
@@ -14,10 +14,5 @@ server:
 
 spring:
   application:
-    name: springboot-tutorial
+    name: springboot-ehcache-tutorial
 
-logging:
-  home: ./logs/test/
-
-debug:
-  true #打印所有的配置(自动配置信息)

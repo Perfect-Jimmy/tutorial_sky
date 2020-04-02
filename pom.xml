@@ -29,6 +29,7 @@
     <module>tutorial_test</module>
     <module>tutorial_utils</module>
     <module>tutorial_lambda</module>
+    <module>tutorial_ehcache</module>
   </modules>
 
   <properties>
@@ -53,6 +54,7 @@
     <redis.version>2.2.5.RELEASE</redis.version>
     <mysql.version>8.0.19</mysql.version>
     <mybatis.version>2.1.2</mybatis.version>
+    <ehcache.version>3.5.2</ehcache.version>
   </properties>
 
   <parent>
