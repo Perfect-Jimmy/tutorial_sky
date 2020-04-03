@@ -1,9 +1,7 @@
 package com.tutorial.multithread.core;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.CopyOnWriteArraySet;
 
 /**
  * 线程不安全
@@ -31,6 +29,7 @@ public class NotSafeDemo01 {
 
     /**
      * map线程不安全
+     * 底层是node类型的数组，链表，红黑树
      * 解决方案:ConcurrentHashMap()
      */
     public static void mapNotSafe(){
