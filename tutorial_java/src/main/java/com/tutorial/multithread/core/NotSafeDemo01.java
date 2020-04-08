@@ -24,7 +24,7 @@ public class NotSafeDemo01 {
     public static void main(String[] args) {
         //NotSafeDemo01.listNotSafe();
         //NotSafeDemo01.setNotSafe();
-        mapNotSafe();
+       // mapNotSafe();
     }
 
     /**
