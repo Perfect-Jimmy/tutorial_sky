@@ -1,6 +1,7 @@
 package com.tutorial.vo;
 
 import lombok.Data;
+import org.dozer.Mapping;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.util.Date;
  */
 @Data
 public class UserVo {
-    private Integer id;
+    private Integer userId;
     private String name;
     private Date birth;
 }

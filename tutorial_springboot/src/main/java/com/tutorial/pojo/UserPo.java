@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.dozer.Mapping;
 
 /**
  * @author jimmy
@@ -14,6 +15,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @Accessors(chain = true)
 public class UserPo {
+    @Mapping("userId")
     private Integer id;
     private String name;
     private int age;
