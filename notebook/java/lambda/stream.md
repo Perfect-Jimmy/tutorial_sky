@@ -1,7 +1,7 @@
 # stream
 ## Stream的操作符大体上分为两种：中间操作符和终止操作符
 Stream 的一系列操作必须要使用终止操作，否者整个数据流是不会流动起来的，即处理操作不会执行
-### 中间操作符 中间操作符在执行制定处理程序后，数据流依然可以传递给下一级的操作符
+### 中间操作符 中间操作符在执行指定处理程序后，数据流依然可以传递给下一级的操作符
 ```
 map(mapToInt,mapToLong,mapToDouble) 转换操作符，把比如A->B，这里默认提供了转int，long，double的操作符。
 flatmap(flatmapToInt,flatmapToLong,flatmapToDouble) 拍平操作比如把 int[]{2,3,4} 拍平 变成 2，3，4 也就是从原来的一个数据变成了3个数据，这里默认提供了拍平成int,long,double的操作符。
