@@ -1,5 +1,5 @@
 * 查看类结构图
-ctrl+h
+control+h
 
 * 输入行号并跳转
 command+l
