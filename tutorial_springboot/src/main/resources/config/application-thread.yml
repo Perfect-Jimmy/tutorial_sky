@@ -1,0 +1,4 @@
+thread:
+  task:
+    pool:
+      corePoolSize: 10

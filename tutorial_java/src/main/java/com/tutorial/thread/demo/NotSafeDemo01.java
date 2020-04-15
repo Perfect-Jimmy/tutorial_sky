@@ -1,4 +1,4 @@
-package com.tutorial.multithread.core;
+package com.tutorial.thread.demo;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;

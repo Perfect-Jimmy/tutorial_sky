@@ -2,7 +2,7 @@ package com.tutorial.multithread.test;
 
 
 import com.tutorial.JavaTutorialStart;
-import com.tutorial.multithread.core.CustomFutureTask;
+import com.tutorial.thread.demo.CustomFutureTask;
 import com.tutorial.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
