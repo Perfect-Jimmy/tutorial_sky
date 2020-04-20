@@ -3,8 +3,6 @@ package com.tutorial.configurer;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.tutorial.interceptor.JwtTokenInterceptor;
-import com.tutorial.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -22,10 +20,10 @@ import java.util.List;
  */
 @Configuration
 public class CustomerWebMvcConfigurer implements WebMvcConfigurer {
-    @Autowired
-    private LoginInterceptor loginInterceptor;
-    @Autowired
-    private JwtTokenInterceptor jwtTokenInterceptor;
+   // @Autowired
+  //  private LoginInterceptor loginInterceptor;
+ //   @Autowired
+  //  private JwtTokenInterceptor jwtTokenInterceptor;
 
     /**
      * 注册拦截器
