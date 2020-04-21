@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+   #context-path: /spring-boot
+    application-display-name: /tutorial-elasticsearch
+  error:
+    path: /error
+  undertow:
+    direct-buffers: true
+    io-threads: 4
+    worker-threads: 160
+spring:
+  application:
+    name: tutorial-elasticsearch
+  #热部署 设置false restart类加载器还会初始化,但不会监视文件更新
+  devtools:
+    restart:
+      enabled: true
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

@@ -30,6 +30,7 @@
     <module>tutorial_utils</module>
     <module>tutorial_lambda</module>
     <module>tutorial_ehcache</module>
+    <module>tutorial_xxljob</module>
   </modules>
 
   <properties>
