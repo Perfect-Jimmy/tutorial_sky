@@ -1,6 +1,7 @@
 package com.tutorial.stream.test;
 
 
+import com.google.common.collect.Lists;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -150,4 +151,13 @@ public class StreamDemo {
         Stream.of("xxx","12345")
                 .map(String::length).collect(Collectors.toSet());
     }
+
+    @Test
+    public void testFilter(){
+        List<String> list = Lists.newArrayList("aa","bb","cc");
+        System.out.println(list);
+        List<String> list2 = list.stream().filter(s->s.equals("bb")).collect(Collectors.toList());
+        System.out.println(list2);
+    }
+
 }

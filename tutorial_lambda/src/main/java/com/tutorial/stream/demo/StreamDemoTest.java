@@ -3,9 +3,11 @@ package com.tutorial.stream.demo;
 import com.tutorial.pojo.Car;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.text.html.Option;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
@@ -20,6 +22,14 @@ public class StreamDemoTest {
             new Car(3L,"audi",50L),
             new Car(4L,"lexus",300L)
     );
+
+    @Test
+    public void streamOption(){
+        Optional.ofNullable(carList).ifPresent(s->{
+            System.out.println(s);
+        });
+    }
+
     /**
      * 筛选与切片
      * filter   接收lambda,从流中排除某些元素
