@@ -15,6 +15,8 @@ server:
 spring:
   application:
     name: springboot-tutorial
+  messages:
+    basename: i18n/language,i18n/message #顺序读取如果存在同名的则读取第一个
 
 logging:
   home: ./logs/test/

@@ -18,6 +18,9 @@ import java.util.stream.Stream;
  */
 public class StreamCollectorsDemo {
 
+  /*  contactInfoMap = fields3.parallelStream().collect(HashMap::new, (map, o) -> {
+        map.put(o.getFieldCode(), categoryId);
+    }, HashMap::putAll);*/
     @Test
     public void demo1(){
         Stream.of(1,2,3).collect(Collectors.toSet());
