@@ -1,0 +1,11 @@
+#查询入口
+type Query {
+    ####### Book相关 #########
+    findById(id:Long!): Book
+}
+
+
+type Mutation {
+    saveBook(name: String!,price: Double!) : Book!
+
+}
