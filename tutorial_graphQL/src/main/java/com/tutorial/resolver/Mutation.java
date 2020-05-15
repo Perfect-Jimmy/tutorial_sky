@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @author jimmy
  * @date 2020/4/30
  */
-@Component
+//@Component
 @AllArgsConstructor
 public class Mutation implements GraphQLMutationResolver {
     BookRepository bookRepository;

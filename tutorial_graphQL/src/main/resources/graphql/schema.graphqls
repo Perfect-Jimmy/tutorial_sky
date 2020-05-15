@@ -1,5 +1,5 @@
 type Book {
-    id: Long!
-    name: String!
-    price: Double!
+    id: Int
+    name: String
+    price: Int
 }
