@@ -13,7 +13,14 @@
   <name>tutorial_lambda</name>
 
 
-
+  <dependencies>
+   <!-- <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+      <version>4.12</version>
+    </dependency>-->
+  </dependencies>
   <build>
     <plugins>
       <!-- 跳过单元测试,不然打包的时候会因为加载不了application.yml报错 -->

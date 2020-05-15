@@ -1,4 +1,4 @@
-package com.tutoeial.excel.test;
+package com.tutorial.excel;
 
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelReader;
