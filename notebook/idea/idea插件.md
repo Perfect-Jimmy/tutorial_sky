@@ -21,4 +21,9 @@ Mongo Plugin
 
 ### mybatis log plugin
 
+### idea上 类调用时序图   SequenceDiagram for IntelliJ IDEA 
+
+### 快捷跳转Action方法 RestfulToolkit
+### 高亮提示  HighlightBracketPair
+### 反编译插件 IdeaJad
 https://rapidgator.net/file/4b9d34efd69e89d8dd83765c21ad87bc/BetZ413.zip.html?referer=https://www.macbed.com/download/48452.html
