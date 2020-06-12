@@ -70,4 +70,26 @@ spring:
 graphql:
   servlet:
     mapping: /graphql   #接口的路径
+    enabled: true
+    corsEnabled: true
     exception-handlers-enabled: true
+  tools:
+    schemaLocationPattern: "**/*.graphqls"
+graphiql:
+  mapping: /graphiql
+  endpoint:
+    graphql: /graphql
+    subscriptions: /subscriptions
+  static:
+    basePath: /
+  enabled: true
+  pageTitle: GraphiQL
+  cdn:
+    enabled: false
+    version: 0.11.11
+  props:
+    resources:
+      query: testquery.query
+      defaultQuery: testquery.query
+
+

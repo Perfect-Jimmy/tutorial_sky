@@ -1,7 +1,5 @@
-#查询入口
 type Query {
-    ####### Book相关 #########
-    findById: [Book]
+    findBookById(id:ID):Book
 }
 
 

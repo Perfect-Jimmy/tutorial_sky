@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 /**
+ * 定义数据查询接口
  * @author jimmy
  * @date 2020/4/30
  */
@@ -15,9 +16,14 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class QueryResolver implements GraphQLQueryResolver {
    // @Autowired
-    BookRepository bookRepository;
+   // BookRepository bookRepository;
 
-    public Book findById(Long id){
-        return bookRepository.getOne(id);
+    public Book findBookById(Long id){
+        Book book = new Book();
+        book.setId(1L);
+        book.setName("java");
+        book.setPrice(10D);
+        return book;
+       // return bookRepository.getOne(id);
     }
 }

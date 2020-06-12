@@ -18,7 +18,7 @@ public class TestController {
 
     @RequestMapping("/findBookById")
     public Book findBookById(@RequestParam(name = "id") Long id){
-        System.out.println(bookService.findById(id));
+       // System.out.println(bookService.findById(id)+"-=====");
         return bookService.findById(id);
     }
 

@@ -7,6 +7,9 @@ package com.tutorial.optional.test;
 
 import org.junit.Test;
 
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -74,5 +77,18 @@ public class OptionalDemo {
         String str = "123";
         Optional<String> str1 = Optional.ofNullable(str).filter(s->s.equals("123"));
         System.out.println(str1);
+    }
+
+
+    @Test
+    public void test6(){
+        Map<String,Object> map = new HashMap<>();
+        System.out.println(map+"-====");
+        Object effectDate = map.get("effect_date");
+        Object transferType = map.get("transfer_type");
+        //如果存在值则使用ifPresent里面的数据代替
+        Optional.ofNullable(effectDate).ifPresent(s -> map.put("effect_date", LocalDate.now().plusDays(1)));
+        Optional.ofNullable(transferType).ifPresent(s -> map.put("transfer_type",4));
+        System.out.println(map);
     }
 }

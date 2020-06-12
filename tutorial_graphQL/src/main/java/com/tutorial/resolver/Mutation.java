@@ -8,11 +8,11 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 /**
+ * 定义数据增删改接口
  * @author jimmy
  * @date 2020/4/30
  */
-//@Component
-@AllArgsConstructor
+@Component
 public class Mutation implements GraphQLMutationResolver {
     BookRepository bookRepository;
 
