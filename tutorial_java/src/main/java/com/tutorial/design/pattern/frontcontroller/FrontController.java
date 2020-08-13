@@ -21,7 +21,7 @@ public class FrontController {
     }
 
     public void dispatchRequest(String request){
-        //记录每一个请求
+        //记录每一个请求，组合模式 模板模式
         trackRequest(request);
         //对用户进行身份验证
         if(isAuthenticUser()){
